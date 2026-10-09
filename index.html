@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="3dGen Local Drive : utilitaire personnel pour importer des images depuis Google Drive vers un environnement ComfyUI local via rclone.">
+  <title>3dGen Local Drive — Accueil</title>
+  <style>
+    :root{color-scheme:light;--bg:#f7f9fc;--fg:#152238;--muted:#52657b;--edge:#dce4ef;--link:#145bb8}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    .wrap{max-width:790px;margin:auto;padding:36px 22px}header,footer{border-color:var(--edge)}
+    header{border-bottom:1px solid var(--edge)}footer{border-top:1px solid var(--edge);margin-top:48px;color:var(--muted);font-size:14px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}nav a{margin-left:14px}
+    a{color:var(--link)}a:hover{text-decoration-thickness:2px}h1{font-size:clamp(2rem,5vw,3rem);line-height:1.14;margin:34px 0 18px}
+    h2{font-size:1.25rem;margin-top:34px}p{max-width:72ch}ul{padding-left:24px}
+    .eyebrow{font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-size:13px}
+    .intro{font-size:1.13rem;color:var(--muted)}.panel{border:1px solid var(--edge);background:white;border-radius:12px;padding:18px 23px;margin-top:30px}
+    .brand{font-weight:750;font-size:20px;color:var(--fg);text-decoration:none}small{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><nav><a class="brand" href="./">3dGen Local Drive</a><div><a href="./">Accueil</a><a href="privacy.html">Confidentialité</a></div></nav></div></header>
+  <main class="wrap">
+    <div class="eyebrow">Application personnelle · Windows · rclone</div>
+    <h1>Transférer des images Google Drive vers un outil de création local</h1>
+    <p class="intro">3dGen Local Drive est une intégration OAuth personnelle utilisée avec <a href="https://rclone.org/">rclone</a> pour lire des images choisies dans Google Drive et les copier vers un ordinateur Windows où fonctionne ComfyUI.</p>
+    <div class="panel">
+      <h2>À quoi sert cette application ?</h2>
+      <ul>
+        <li>Autoriser rclone, sur l'ordinateur de l'utilisateur, à accéder à son compte Google Drive avec son consentement explicite.</li>
+        <li>Récupérer les images que l'utilisateur place dans le dossier Drive configuré pour 3dGen, afin de préparer des générations d'images ou de vidéos locales.</li>
+        <li>Ne pas dépendre de l'identifiant OAuth partagé de rclone, dont le retrait est annoncé en 2026.</li>
+      </ul>
+    </div>
+    <h2>Utilisation personnelle, pas un service ouvert au public</h2>
+    <p>Cette configuration est destinée à un nombre très limité d'utilisateurs autorisés. Le site Web explique simplement pourquoi une autorisation Google est demandée. Il ne contient pas de formulaire d'inscription, ne se connecte pas lui-même à Google Drive et ne demande jamais de saisir un mot de passe, un secret OAuth ou un jeton.</p>
+    <h2>Accès et contrôle</h2>
+    <p>La permission exacte accordée à rclone est présentée par Google pendant l'autorisation OAuth. Elle peut être plus étendue que le seul dossier 3dGen, même si l'utilisation prévue est limitée aux transferts configurés. L'utilisateur peut retirer cet accès en tout temps dans les paramètres de sécurité de son compte Google.</p>
+    <h2>Confidentialité</h2>
+    <p>Les fichiers transférés sont utilisés dans l'environnement local de l'utilisateur; les identifiants et jetons rclone restent sur son ordinateur. Pour les détails concernant l'accès, l'utilisation, le stockage et la suppression des données, lire la <a href="privacy.html">politique de confidentialité</a>.</p>
+    <p><small>Cette application indépendante n'est pas développée ni approuvée par Google. Google Drive est une marque de Google LLC.</small></p>
+  </main>
+  <footer><div class="wrap">3dGen Local Drive · Usage personnel · <a href="privacy.html">Politique de confidentialité</a> · <a href="https://github.com/mathieupitre-rgb/3dgen-oauth-site/issues">Contact (GitHub Issues)</a></div></footer>
+</body>
+</html>
