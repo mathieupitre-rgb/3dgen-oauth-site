@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité de 3dGen Local Drive, intégration Google Drive via rclone sur un ordinateur personnel.">
+  <title>3dGen Local Drive — Politique de confidentialité</title>
+  <style>
+    :root{color-scheme:light;--bg:#f7f9fc;--fg:#152238;--muted:#52657b;--edge:#dce4ef;--link:#145bb8}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    .wrap{max-width:790px;margin:auto;padding:36px 22px}header,footer{border-color:var(--edge)}
+    header{border-bottom:1px solid var(--edge)}footer{border-top:1px solid var(--edge);margin-top:48px;color:var(--muted);font-size:14px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}nav a{margin-left:14px}
+    a{color:var(--link)}a:hover{text-decoration-thickness:2px}h1{font-size:clamp(2rem,5vw,2.8rem);line-height:1.15;margin:30px 0 14px}
+    h2{font-size:1.25rem;margin-top:34px}p,li{max-width:74ch}ul{padding-left:24px}
+    .brand{font-weight:750;font-size:20px;color:var(--fg);text-decoration:none}
+    .lead{font-size:1.08rem;color:var(--muted)}.note{border:1px solid var(--edge);background:#fff;border-radius:12px;padding:16px 20px;margin:26px 0}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="./">3dGen Local Drive</a><div><a href="./">Accueil</a><a href="privacy.html">Confidentialité</a></div></nav></div></header>
+<main class="wrap">
+  <h1>Politique de confidentialité</h1>
+  <p class="lead">3dGen Local Drive · Dernière mise à jour : 9 octobre 2026</p>
+  <div class="note"><strong>En bref :</strong> 3dGen Local Drive est une utilisation personnelle de rclone et de Google Drive. Les transferts de fichiers et l'authentification se font sur l'ordinateur de l'utilisateur. Cette page statique ne demande pas de connexion et ne reçoit ni mot de passe ni jeton.</div>
+
+  <h2>1. Objet de l'application</h2>
+  <p>L'application utilise un client OAuth Google pour autoriser <a href="https://rclone.org/">rclone</a> sur un PC Windows. Le système local 3dGen peut récupérer des fichiers images depuis un dossier de Google Drive choisi par l'utilisateur et les fournir à un environnement de création ComfyUI local. Elle n'est pas commercialisée comme service public.</p>
+
+  <h2>2. Données accessibles</h2>
+  <ul>
+    <li><strong>Fichiers Google Drive :</strong> noms, métadonnées et contenu des images nécessaires aux opérations autorisées. Les permissions exactes dépendent de la portée OAuth approuvée au moment de la connexion et peuvent, techniquement, porter sur un ensemble de fichiers plus vaste que le dossier ciblé par le travail local.</li>
+    <li><strong>Jetons d'autorisation :</strong> jetons OAuth et données de configuration conservés dans la configuration privée de rclone sur l'ordinateur local.</li>
+    <li><strong>Données opérationnelles :</strong> noms de fichiers, références de jobs, statuts techniques et erreurs assainies pouvant être inscrits dans les journaux locaux et dans la file GitHub privée du projet 3dGen.</li>
+  </ul>
+
+  <h2>3. Utilisation et transfert des données</h2>
+  <p>Les données Drive sont utilisées seulement pour les opérations explicitement demandées par l'utilisateur, principalement la lecture et la copie d'images vers son ordinateur. Google traite les requêtes d'authentification et de fichiers nécessaires au service Drive; GitHub héberge les métadonnées de coordination de jobs, mais pas les contenus des images récupérées ni les jetons OAuth. Les fichiers peuvent ensuite être utilisés par ComfyUI localement. Aucune vente de données ni exploitation publicitaire n'est effectuée par cette intégration.</p>
+
+  <h2>4. Stockage, durée et suppression</h2>
+  <p>Les copies d'images, les journaux et la configuration OAuth sont stockés dans les répertoires privés du PC Windows et restent jusqu'à suppression par l'utilisateur ou application d'une règle locale de rétention. Les statuts de jobs dans le dépôt privé GitHub peuvent conserver des métadonnées après la fin d'un travail. Il n'existe pas de base de données centrale gérée par ce site public. L'utilisateur peut supprimer les fichiers et la configuration rclone sur son ordinateur, ainsi que les entrées pertinentes dans son dépôt GitHub.</p>
+
+  <h2>5. Sécurité et révocation</h2>
+  <p>Les identifiants du client, les jetons OAuth et les fichiers de configuration rclone doivent rester privés et ne doivent jamais être publiés sur GitHub Pages ni transmis à des tiers. Le client OAuth est utilisé localement. L'utilisateur peut révoquer l'accès depuis les paramètres de sécurité de son compte Google et supprimer le remote rclone. La révocation n'efface pas automatiquement les fichiers déjà copiés localement.</p>
+
+  <h2>6. Ce site Web public</h2>
+  <p>Ce site est statique : il ne contient ni formulaire de collecte, ni code de suivi analytique ajouté par 3dGen, ni mécanisme d'accès au compte Google. Il est hébergé par GitHub Pages. GitHub peut traiter des données techniques de visite selon sa propre <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">déclaration de confidentialité</a>.</p>
+
+  <h2>7. Services tiers et changements</h2>
+  <p>Les requêtes aux services de Google sont assujetties aux politiques de Google. Le fonctionnement local utilise rclone, ComfyUI et GitHub pour les fonctions décrites. Si les usages ou permissions évoluent, cette politique sera mise à jour publiquement avant de représenter les nouveaux usages comme actifs.</p>
+
+  <h2>8. Contact</h2>
+  <p>Pour une question sur cette application personnelle ou cette politique, ouvrir une <a href="https://github.com/mathieupitre-rgb/3dgen-oauth-site/issues">demande dans le dépôt GitHub public</a>, sans y publier de données personnelles, d'identifiants OAuth ou de contenus Drive.</p>
+
+  <p><small>3dGen Local Drive est une intégration indépendante. Elle n'est ni développée ni approuvée par Google.</small></p>
+</main>
+<footer><div class="wrap"><a href="./">Accueil</a> · <a href="privacy.html">Politique de confidentialité</a></div></footer>
+</body>
+</html>
